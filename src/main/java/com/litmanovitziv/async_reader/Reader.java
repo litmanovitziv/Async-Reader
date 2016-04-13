@@ -10,11 +10,11 @@ public abstract class Reader implements Runnable {
     protected File[] _files = {};
     protected BlockingQueue<String> _queue;
     protected RecordHandler _handler;
-    protected AliveLogger _logger = new AliveLogger(1, "reading_logger");
+    protected static AliveLogger _logger = new AliveLogger(1, "reading_logger");
     
     protected Reader(BlockingQueue<String> queue, String outputFile, int logBulkSize) {
-        _logger = new AliveLogger(logBulkSize, outputFile);
-//    	_logger.addActors();
+//        _logger = new AliveLogger(logBulkSize, outputFile);
+    	_logger.addActors();
         _queue = queue;
     }
     
