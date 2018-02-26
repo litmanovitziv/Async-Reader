@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.concurrent.BlockingQueue;
 
-public class StreamReader extends Reader {
+public class StreamReader extends FileReader {
 
 	public StreamReader(BlockingQueue<String> queue, String outputFile, int logBulkSize) {
 		super(queue, outputFile, logBulkSize);

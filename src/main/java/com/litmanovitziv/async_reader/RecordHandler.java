@@ -11,16 +11,17 @@ public abstract class RecordHandler implements Runnable {
 
 	@Override
 	public void run() {
-		while (true) {
-			try {
-				processLine(this._queue.take());
-			} catch (Exception e) {
-				done();
+		try {
+			while (true) {
+				processRecord(this._queue.take());
 			}
+//			done();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
-	protected abstract void processLine(String line) throws Exception;
+	protected abstract void processRecord(String line) throws Exception;
     protected abstract void done();
     
 }

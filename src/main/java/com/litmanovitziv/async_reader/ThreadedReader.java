@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
-public class ThreadedReader extends Reader {
+public class ThreadedReader extends FileReader {
     private ExecutorService _executor;
     private int _nThreads;
 

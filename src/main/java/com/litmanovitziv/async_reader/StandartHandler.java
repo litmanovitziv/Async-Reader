@@ -14,7 +14,7 @@ public class StandartHandler extends RecordHandler {
 	}
 	
 	@Override
-	public void processLine(String line) throws Exception {
+	public void processRecord(String line) throws Exception {
 		System.out.println(line);
 		this.writeRecord(line);
 	}

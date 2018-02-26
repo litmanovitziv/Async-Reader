@@ -54,7 +54,7 @@ public class AliveLogger {
         if (shouldLog) {
             try {
 //                System.out.println(String.format("%s alive, so far %d processed\n", new Date().toString(), c));
-                fileLogger.writeBytes(String.format("%s alive, so far %d processed\n", new Date().toString(), c));
+                fileLogger.writeBytes(String.format("%s alive, so far %d entities was retrieved\n", new Date().toString(), c));
             } catch (IOException e) {
                 e.printStackTrace();
             }

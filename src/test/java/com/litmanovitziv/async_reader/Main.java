@@ -16,7 +16,7 @@ public class Main {
      * args[4]: bulk test
      */
 	public static void main(String[] args) {
-		Reader reader1 = null, reader2 = null;
+		FileReader reader1 = null, reader2 = null;
 		RecordHandler handler = null;
 		BlockingQueue<String> queue = new LinkedBlockingDeque<String>();
 
@@ -34,7 +34,7 @@ public class Main {
             concumer.start();
             producer1.join();
             producer2.join();
-            concumer.interrupt();
+            concumer.join();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
